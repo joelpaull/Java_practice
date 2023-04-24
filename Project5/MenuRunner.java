@@ -26,6 +26,11 @@ public class MenuRunner {
         System.out.print("Choice: ");
         int choice = input.nextInt();
 
+        performOperation(number1, number2, choice);
+
+        input.close();
+    }
+    private static void performOperation(int number1, int number2, int choice) {
         if (choice == 1) {
             System.out.printf("%d + %d = %d", number1, number2, number1 + number2).println();
         } else if (choice == 2) {
@@ -37,8 +42,6 @@ public class MenuRunner {
         } else {
             System.out.println("Invalid input");
         }
-
-        input.close();
     }
 }
 
