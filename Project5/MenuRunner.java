@@ -27,8 +27,18 @@ public class MenuRunner {
         int choice = input.nextInt();
 
         if (choice == 1) {
-            
+            System.out.printf("%d + %d = %d", number1, number2, number1 + number2).println();
+        } else if (choice == 2) {
+            System.out.printf("%d - %d = %d", number1, number2, number1 - number2).println();
+        } else if (choice == 3) {
+            System.out.printf("%d * %d = %d", number1, number2, number1 * number2).println();
+        } else if (choice == 4) {
+            System.out.printf("%d / %d = %d", number1, number2, number1 / number2).println();
+        } else {
+            System.out.println("Invalid input");
         }
+
+        input.close();
     }
 }
 
