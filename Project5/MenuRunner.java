@@ -26,11 +26,12 @@ public class MenuRunner {
         System.out.print("Choice: ");
         int choice = input.nextInt();
 
-        performOperation(number1, number2, choice);
+        performOperationIfElse(number1, number2, choice);
+        performOperationSwitch(number1, number2, choice);
 
         input.close();
     }
-    private static void performOperation(int number1, int number2, int choice) {
+    private static void performOperationIfElse(int number1, int number2, int choice) {
         if (choice == 1) {
             System.out.printf("%d + %d = %d", number1, number2, number1 + number2).println();
         } else if (choice == 2) {
@@ -43,7 +44,28 @@ public class MenuRunner {
             System.out.println("Invalid input");
         }
     }
+
+    private static void performOperationSwitch(int number1, int number2, int choice) {
+        switch (choice) {
+        case 1: 
+            System.out.printf("%d + %d = %d", number1, number2, number1 + number2).println();
+            break;
+        case 2: 
+            System.out.printf("%d - %d = %d", number1, number2, number1 - number2).println();
+            break;
+        case 3:
+            System.out.printf("%d * %d = %d", number1, number2, number1 * number2).println();
+            break;
+        case 4:
+            System.out.printf("%d / %d = %d", number1, number2, number1 / number2).println();
+            break;
+        default:
+            System.out.println("Invalid input");
+            break;
+        }
+    }
 }
+
 
 
 
