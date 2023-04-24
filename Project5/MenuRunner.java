@@ -9,15 +9,10 @@ public class MenuRunner {
         System.out.print("Please enter first number: ");
         Scanner input = new Scanner(System.in);
         int number1 = input.nextInt();
-        System.out.println("Number you Entered is: " + number1);
-        input.close();
 
         // Get second number from user
         System.out.print("Please enter second number: ");
-        Scanner input2 = new Scanner(System.in);
-        int number2 = input2.nextInt();
-        System.out.println("Second number is: " + number2);
-        input2.close();
+        int number2 = input.nextInt();
 
 
         //Show user choices
@@ -28,13 +23,16 @@ public class MenuRunner {
         + "4 - Divide\n");
 
         // Get user choice
-        System.out.println("Choice: ");
-        Scanner choice_input = new Scanner(System.in);
-        int choice = choice_input.nextInt();
-        choice_input.close();
+        System.out.print("Choice: ");
+        int choice = input.nextInt();
 
+        if (choice == 1) {
+            
+        }
     }
 }
+
+
 
 
 
